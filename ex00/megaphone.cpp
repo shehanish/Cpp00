@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 				std::cout << static_cast<char>(std::toupper(argv[i][j]));	
 			}
 			if (i < argc - 1)
-                std::cout << ' ';
+                		std::cout << ' ';
 		}
 		std::cout << std::endl;
 	}
