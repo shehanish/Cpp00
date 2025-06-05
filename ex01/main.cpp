@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:18:34 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/03 18:07:23 by shkaruna         ###   ########.fr       */
+/*   Updated: 2025/06/05 08:51:08 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 #include <iostream>
 #include <string>
+
+void	exit_signal_handler(int sig)
+{
+	
+}
 
 int main(int argc, char **argv)
 {
@@ -34,12 +39,8 @@ int main(int argc, char **argv)
 		if(input == "ADD")
 		{
 			std::cout << "Adding a new contact" << std::endl;
-			phonebook.add_firstname();
-			phonebook.add_firstname();
-			phonebook.add_firstname();
-			phonebook.add_firstname();
-			phonebook.add_firstname();
-			phonebook.add_firstname();
+			phonebook.add_contacts();
+			
 			
 		}
 		else if(input == "SEARCH")

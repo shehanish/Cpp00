@@ -1,3 +1,4 @@
+
 #compiler 
 CXX = g++
 
@@ -5,10 +6,10 @@ CXX = g++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 #executable name
-NAME = phonebook
+NAME = megaphone
 
 #source files
-SRC = main.cpp phonebook.cpp contact.cpp
+SRC = megaphone.cpp
 
 #object files
 OBJ = $(SRC:.cpp=.o)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:18:55 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/03 18:05:39 by shkaruna         ###   ########.fr       */
+/*   Updated: 2025/06/04 11:40:34 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "contact.hpp"
 #include <iostream>
 #include <string>
+#include <cctype>
 
 class 	 PhoneBook{
 	private:
@@ -25,7 +26,12 @@ class 	 PhoneBook{
 
 	public:
 		PhoneBook();
-		void	add_firstname();
+		void	add_contacts();
+		void    add_firstname();
+		void    add_lastname();
+		void    add_nickname();
+		void	add_phonenumber();
+		void    add_darkest_secret();
 		
 	
 };
