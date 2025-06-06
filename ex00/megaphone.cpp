@@ -6,7 +6,7 @@
 /*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 21:34:29 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/05/28 11:33:08 by shehanihans      ###   ########.fr       */
+/*   Updated: 2025/06/05 14:33:37 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 		{
 			for(int j = 0; argv[i][j]; ++j)
 			{
-				std::cout << static_cast<char>(std::toupper(argv[i][j]));	
+				std::cout << static_cast<char>(std::toupper(argv[i][j]));	^
 			}
 			if (i < argc - 1)
                 		std::cout << ' ';

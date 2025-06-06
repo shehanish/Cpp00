@@ -1,0 +1,15 @@
+
+- Search()
+. 4 colums
+
+| Index  | First name | Last name | Nick name | 
+|       0| 	   Shehani|    Karunat|      Hansi|
+
+1. Get the input from the terminal
+2. Check the input is valid 0 -7
+	a. if not valid, print an error msg and return 
+3. Print the first line of the table
+4. Print the required contact details
+    a. We have to make sure the contact details are right aligned by using setw() 
+	b. if the input in longer than the colum, we should truncated and put (.) at the end
+	

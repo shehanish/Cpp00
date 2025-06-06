@@ -6,7 +6,7 @@
 /*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:18:55 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/04 11:40:34 by shehanihans      ###   ########.fr       */
+/*   Updated: 2025/06/05 14:37:01 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ class 	 PhoneBook{
 		void    add_nickname();
 		void	add_phonenumber();
 		void    add_darkest_secret();
-		
-	
+		void	search();
 };
 
 

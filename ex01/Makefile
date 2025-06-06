@@ -1,5 +1,5 @@
 #compiler 
-CXX = g++
+CXX = c++
 
 #compilerflags 
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98

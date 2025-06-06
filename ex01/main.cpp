@@ -6,7 +6,7 @@
 /*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:18:34 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/05 08:51:08 by shehanihans      ###   ########.fr       */
+/*   Updated: 2025/06/05 14:36:44 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,17 @@
 #include <iostream>
 #include <string>
 
-void	exit_signal_handler(int sig)
-{
-	
-}
 
 int main(int argc, char **argv)
 {
+
+	
+	Contact contact1;
+	
+	//contact1.set_firstname("Finn");
+
+	//std::cout << contact1.get_firstname() << std::endl;
+	
 	(void)argv;
 	(void)argc;
 	
@@ -34,7 +38,13 @@ int main(int argc, char **argv)
 	while(true)
 	{
 		std::cout << ">" ;
-		std::getline(std::cin, input);
+		
+		if(!std::getline(std::cin, input))
+		{
+			std::cout << "EOF, Exiting the program!" << std::endl;
+			break;
+		}
+		
 		
 		if(input == "ADD")
 		{
@@ -46,6 +56,7 @@ int main(int argc, char **argv)
 		else if(input == "SEARCH")
 		{
 			std::cout << "Searching for a contact" << std::endl;
+			phonebook.search();
 		}
 		else if(input == "EXIT")
 		{
@@ -60,3 +71,4 @@ int main(int argc, char **argv)
 	
 	return (0);
 }
+

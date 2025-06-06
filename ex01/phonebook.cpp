@@ -6,7 +6,7 @@
 /*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 10:52:45 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/05 08:49:42 by shehanihans      ###   ########.fr       */
+/*   Updated: 2025/06/05 15:20:20 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,18 @@ void     PhoneBook::add_darkest_secret()
 	
 }
 
+void	PhoneBook::search()
+{
+	std::string		input;
+	Contact contact;
+	std::getline(std::cin, input);
+	std::cout << input << std::endl;
+
+
+	
+	std::cout << contacts[0].get_firstname();
+	std::cout << "|" << std::endl;
+}
 std::string		formatColumn(const std::string &input)
 {
 	if(input.length() > 10)

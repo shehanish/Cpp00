@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:18:39 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/03 15:40:12 by shkaruna         ###   ########.fr       */
+/*   Updated: 2025/06/05 14:32:54 by shehanihans      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Contact {
 		std::string nickname;
 		std::string phonenumber;
 		std::string darkest_secret;
-		
 	public:
 		//Methods (functions)
 		//Can be used from outside the class
@@ -41,5 +40,7 @@ class Contact {
 		void	set_phonenumber(const std::string& name);
 		void	set_darkestsecret(const std::string& name);
 };
+
+
 
 #endif
