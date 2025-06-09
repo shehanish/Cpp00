@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
+/*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:18:34 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/05 14:36:44 by shehanihans      ###   ########.fr       */
+/*   Updated: 2025/06/09 18:06:32 by shkaruna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,12 @@
 int main(int argc, char **argv)
 {
 
-	
-	Contact contact1;
-	
-	//contact1.set_firstname("Finn");
-
-	//std::cout << contact1.get_firstname() << std::endl;
-	
 	(void)argv;
 	(void)argc;
 	
 	std::string input;
 	PhoneBook phonebook;
+	Contact contact;
 	
 	std::cout << "You can ADD, SEARCH or EXIT" << std::endl;
 	
@@ -55,11 +49,12 @@ int main(int argc, char **argv)
 		}
 		else if(input == "SEARCH")
 		{
-			std::cout << "Searching for a contact" << std::endl;
+			std::cout << "********Displaying the contact list*********" << std::endl;
 			phonebook.search();
 		}
 		else if(input == "EXIT")
 		{
+			std::cout << "Exiting the program. Goodbye!" << std::endl;
 			break;
 		}
 		else

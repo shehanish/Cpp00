@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shehanihansika <shehanihansika@student.    +#+  +:+       +#+        */
+/*   By: shkaruna <shkaruna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 10:52:45 by shkaruna          #+#    #+#             */
-/*   Updated: 2025/06/05 15:20:20 by shehanihans      ###   ########.fr       */
+/*   Updated: 2025/06/09 17:36:31 by shkaruna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
+#include <iomanip>
 
 std::string		formatColumn(const std::string &input);
 
@@ -68,8 +69,9 @@ void     PhoneBook::add_lastname()
 			
 		std::cout << "Last name cannot be empty!" << std::endl;
 	
-		contacts[current_index].set_lastname(input);
+		
 	}	
+	contacts[current_index].set_lastname(input);
 }
 
 void     PhoneBook::add_nickname()
@@ -87,8 +89,9 @@ void     PhoneBook::add_nickname()
 			
 		std::cout << "Nick name cannot be empty!" << std::endl;
 	
-		contacts[current_index].set_nickname(input);
+		
 	}	
+	contacts[current_index].set_nickname(input);
 }
 
 void     PhoneBook::add_phonenumber()
@@ -104,11 +107,6 @@ void     PhoneBook::add_phonenumber()
 		if (input.empty())
 		{
 			std::cout << "Phone number cannot be empty!" << std::endl;
-			continue;
-		}
-		if(!std::all_of(input.begin(), input.end(), ::isdigit))
-		{
-			std::cout << "Please enter numbers only! " << std::endl;
 			continue;
 		}
 		contacts[current_index].set_phonenumber(input);
@@ -131,24 +129,56 @@ void     PhoneBook::add_darkest_secret()
 			
 		std::cout << "Darkest secret cannot be empty!" << std::endl;
 	
-		contacts[current_index].set_nickname(input);
+		
 	}	
+	contacts[current_index].set_darkestsecret(input);
 	
 	
 }
 
-void	PhoneBook::search()
-{
-	std::string		input;
-	Contact contact;
+void PhoneBook::search() {
+	if (total_contacts == 0) {
+		std::cout << "PhoneBook is empty." << std::endl;
+		return;
+	}
+
+	std::cout << "last name: " << contacts[0].get_lastname() << std::endl;
+	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
+	for (int i = 0; i < total_contacts; ++i) {
+		std::cout << "|" << std::setw(10) << i << "|"
+		          << formatColumn(contacts[i].get_firstname()) << "|"
+		          << formatColumn(contacts[i].get_lastname()) << "|"
+		          << formatColumn(contacts[i].get_nickname()) << "|"
+		          << std::endl;
+	}
+
+	std::cout << "Enter the index of the contact to view details: ";
+	std::string input;
 	std::getline(std::cin, input);
-	std::cout << input << std::endl;
 
+	if (std::cin.eof())
+		return;
 
-	
-	std::cout << contacts[0].get_firstname();
-	std::cout << "|" << std::endl;
+	if (input.length() != 1 || !std::isdigit(input[0])) {
+		std::cout << "Invalid input. Please enter a number from 0 to 7." << std::endl;
+		return;
+	}
+
+	int index = input[0] - '0';
+
+	if (index < 0 || index >= total_contacts) {
+		std::cout << "No contact at this index." << std::endl;
+		return;
+	}
+
+	// Show full contact
+	std::cout << "First Name: " << contacts[index].get_firstname() << std::endl;
+	std::cout << "Last Name: " << contacts[index].get_lastname() << std::endl;
+	std::cout << "Nickname: " << contacts[index].get_nickname() << std::endl;
+	std::cout << "Phone Number: " << contacts[index].get_phonenumber() << std::endl;
+	std::cout << "Darkest Secret: " << contacts[index].get_darkestsecret() << std::endl;
 }
+
 std::string		formatColumn(const std::string &input)
 {
 	if(input.length() > 10)
